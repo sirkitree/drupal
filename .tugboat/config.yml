@@ -62,9 +62,9 @@ services:
         # files from another publicly-accessible Drupal site instead of
         # syncing the entire files directory into the Tugboat Preview.
         # This results in smaller previews and reduces the build time.
-        - drush -r "${TUGBOAT_ROOT}" pm-download stage_file_proxy
-        - drush -r "${TUGBOAT_ROOT}" pm-enable --yes stage_file_proxy
-        - drush -r "${TUGBOAT_ROOT}" variable-set stage_file_proxy_origin "http://www.example.com"
+        #- drush -r "${TUGBOAT_ROOT}" pm-download stage_file_proxy
+        #- drush -r "${TUGBOAT_ROOT}" pm-enable --yes stage_file_proxy
+        #- drush -r "${TUGBOAT_ROOT}" variable-set stage_file_proxy_origin "http://www.example.com"
 
       # Commands that build the site. This is where you would add things
       # like feature reverts or any other drush commands required to
