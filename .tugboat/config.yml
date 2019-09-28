@@ -54,9 +54,9 @@ services:
         # SSH key found in the Tugboat Repository configuration must be
         # copied to the external server in order to use rsync over SSH.
         #- rsync -av --delete user@example.com:/path/to/files/ "${TUGBOAT_ROOT}/sites/default/files/"
-        #- chgrp -R www-data "${TUGBOAT_ROOT}/sites/default/files"
-        #- find "${TUGBOAT_ROOT}/sites/default/files" -type d -exec chmod 2775 {} \;
-        #- find "${TUGBOAT_ROOT}/sites/default/files" -type f -exec chmod 0664 {} \;
+        - chgrp -R www-data "${TUGBOAT_ROOT}/sites/default/files"
+        - find "${TUGBOAT_ROOT}/sites/default/files" -type d -exec chmod 2775 {} \;
+        - find "${TUGBOAT_ROOT}/sites/default/files" -type f -exec chmod 0664 {} \;
 
         # Alternatively, another common practice is to use the
         # stage_file_proxy Drupal module. This module lets Drupal serve
