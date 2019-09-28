@@ -48,7 +48,7 @@ services:
 
         # Install/update packages managed by composer, including drush
         - composer install --no-ansi
-        - cd "/var/lib/tugboat" && composer require drush/drush'
+        - cd "/var/lib/tugboat" && composer require drush/drush
 
         # Copy the files directory from an external server. The public
         # SSH key found in the Tugboat Repository configuration must be
