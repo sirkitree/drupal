@@ -74,8 +74,8 @@ services:
       # and update steps, because the results of those are inherited
       # from the base preview.
       build:
-        - drush -r "${TUGBOAT_ROOT}" cache-rebuild
-        - drush -r "${TUGBOAT_ROOT}" updb -y
+        #- drush -r "${TUGBOAT_ROOT}" cache-rebuild
+        #- drush -r "${TUGBOAT_ROOT}" updb -y
 
   # What to call the service hosting MySQL. This name also acts as the
   # hostname to access the service by from the php service.
